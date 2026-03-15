@@ -36,6 +36,13 @@ const eventSchema = new mongoose.Schema(
       ref: 'User',
       required: true,
     },
+    phases: [
+      {
+        label: String,
+        status: { type: String, enum: ['done', 'active', 'upcoming'], default: 'upcoming' },
+        date: String,
+      }
+    ],
   },
   { timestamps: true }
 );

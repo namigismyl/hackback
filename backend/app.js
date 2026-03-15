@@ -10,6 +10,8 @@ const organizationRoutes = require('./routes/organizationRoutes');
 const eventRoutes = require('./routes/eventRoutes');
 const teamRoutes = require('./routes/teamRoutes');
 const projectRoutes = require('./routes/projectRoutes');
+const ticketRoutes = require('./routes/ticketRoutes');
+const announcementRoutes = require('./routes/announcementRoutes');
 
 const app = express();
 
@@ -31,5 +33,7 @@ app.use('/api/organizations', organizationRoutes);
 app.use('/api/events', eventRoutes);
 app.use('/api/teams', teamRoutes);
 app.use('/api/projects', projectRoutes);
+app.use('/api/tickets', ticketRoutes);
+app.use('/api/announcements', announcementRoutes);
 
 module.exports = app;
